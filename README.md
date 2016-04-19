@@ -4,6 +4,8 @@ Motion magnication acts like a microscope for low amplitude motions in image se
 
 The algorithm is designed to work with Extreme Ultraviolet imaging observations of the Sun made with [Atmospheric Imaging Assembly](http://aia.lmsal.com) onboard [Solar Dynamics Observatory](http://sdo.gsfc.nasa.gov), but can be applied to any time sequence of images, i.e. an imaging data cube.
 
+If you use my motion magnification code in your research, please, let [me](mailto:sergey.istp@gmail.com) know and cite the paper describing it. The information about the paper will apear here after its acceptance.
+
 ##Dependences
 The  code is implemented in [Python 3](https://www.python.org) and requires [NumPy](http://www.numpy.org) and  [SciPy](http://scipy.org). The easiest way to get full scientific Python environment is to install the Python  3 version of [Anaconda](https://www.continuum.io/downloads), which is available for Windows, Mac, and Linux. 
 You also will need to install [Dual-Tree Complex Wavelet Transform library for Python](https://github.com/rjw57/dtcwt).
