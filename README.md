@@ -1,3 +1,4 @@
+
 # DTCWT based motion magnification
 Motion magnication acts like a microscope for low amplitude motions in image sequences, i.e. imaging data cubes or videos. It articially amplifies small displacements making them detectable by eye or some automated technique. The code provided here  is based on the two-dimensional Dual Tree Complex Wavelet Transform (DTCWT) and  allows for magnifying transverse quasi-periodic motions of contrast features in image sequences. 
 
@@ -8,4 +9,10 @@ The  code is implemented in [Python 3](https://www.python.org) and requires [Num
 You also will need to install [Dual-Tree Complex Wavelet Transform library for Python](https://github.com/rjw57/dtcwt).
 ##Usage
 ###From Python
+    from magnify import *
+    result = magnify_motions_2d(input_data, k = k, width = width)
+Variable input_data must a 3D NumPy double array with the shape of `[nt, ny, nx]`. Where `nt`  is total number of images, `nx` and `ny` are spatial dimentions. Result will be returned in the same format. 
+ 
 ###From IDL
+    data_amplified = magnify_2d(data,10,35)
+Variable `data` must be a 3D double array with the size of `[nx, ny, nt]`,  where `nx`,  `ny`  are dimensions of a single image and `nt` is the number of images. The result will be returned in the same format.
