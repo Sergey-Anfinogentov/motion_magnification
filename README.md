@@ -8,13 +8,14 @@ If you use my motion magnification code in your research, please, let [me](mailt
 
 ## Dependences
 The  code is implemented in [Python 3](https://www.python.org) and requires [NumPy](http://www.numpy.org) and  [SciPy](http://scipy.org). The easiest way to get full scientific Python environment is to install the Python  3 version of [Anaconda](https://www.continuum.io/downloads), which is available for Windows, Mac, and Linux. 
-You also will need to install [Dual-Tree Complex Wavelet Transform library for Python](https://github.com/rjw57/dtcwt).
+You also will need to install [Dual-Tree Complex Wavelet Transform library for Python](https://github.com/rjw57/dtcwt)
+
 ## Usage
 ### From Python
     from magnify import *
     result = magnify_motions_2d(input_data, k = k, width = width)
-Variable input_data must a 3D NumPy double array with the shape of `[nt, ny, nx]`. Where `nt`  is total number of images, `nx` and `ny` are spatial dimentions. Result will be returned in the same format. 
+Variable input_data must a 3D NumPy double array with the shape of `[nt, ny, nx]`. Where `nt`  is total number of images, `nx` and `ny` are spatial dimentions. Due to the restrictions of the underlying DTCWT library,  `nx` and `ny` dimensions must be even. Result will be returned in the same format. 
  
 ### From IDL
     data_amplified = magnify_2d(data, k, width)
-Variable `data` must be a 3D double array with the size of `[nx, ny, nt]`,  where `nx`,  `ny`  are dimensions of a single image and `nt` is the number of images. The result will be returned in the same format. `k` is the magnification factor and `width` is the phase smothing width, which must be larger than the time scale of the motion to be magnified. 
+Variable `data` must be a 3D double array with the size of `[nx, ny, nt]`,  where `nx`,  `ny`  are dimensions of a single image and `nt` is the number of images. Due to the restrictions of the underlying DTCWT library,  `nx` and `ny` dimensions must be even. The result will be returned in the same format. `k` is the magnification factor and `width` is the phase smothing width, which must be larger than the time scale of the motion to be magnified. 
