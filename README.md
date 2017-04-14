@@ -14,7 +14,8 @@ You also will need to install [Dual-Tree Complex Wavelet Transform library for P
 ### From Python
     from magnify import *
     result = magnify_motions_2d(input_data, k = k, width = width)
-Variable input_data must a 3D NumPy double array with the shape of `[nt, ny, nx]`. Where `nt`  is total number of images, `nx` and `ny` are spatial dimentions. Due to the restrictions of the underlying DTCWT library,  `nx` and `ny` dimensions must be even numbers. Result will be returned in the same format. 
+Variable input_data must a 3D NumPy double array with the shape of `[nt, ny, nx]`. Where `nt`  is total number of images, `nx` and `ny` are spatial dimentions. Due to the restrictions of the underlying DTCWT library,  `nx` and `ny` dimensions must be even numbers. Result will be returned in the same format. `k` is the magnification factor and `width` is the phase smothing width, which must be larger than the time scale of the motion to be magnified. 
+
  
 ### From IDL
     data_amplified = magnify_2d(data, k, width)
