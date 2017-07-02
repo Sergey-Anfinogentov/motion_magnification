@@ -21,6 +21,6 @@ Variable input_data must a 3D NumPy double array with the shape of `[nt, ny, nx]
  
 ### From IDL
 ```idl
-data_amplified = magnify_2d(data, k, width)
+data_magnified = magnify_2d(data, k, width)
 ```
 Variable `data` must be a 3D double array with the size of `[nx, ny, nt]`,  where `nx`,  `ny`  are dimensions of a single image and `nt` is the number of images. Due to the restrictions of the underlying DTCWT library,  `nx` and `ny` dimensions must be even numbers. The result will be returned in the same format. `k` is the magnification factor and `width` is the phase smothing width, which must be larger than the time scale of the motion to be magnified. 
