@@ -26,7 +26,7 @@ def get_phases(pyramids,level):
     return(ang)
 
 def flattop_filter1d(data,width, axis = 0, mode = 'reflect'):
-    window_size =  width/0.2327
+    window_size =  round(width/0.2327)
     window = signal.flattop(window_size)
     window = window/np.sum(window)
     result = ndimage.convolve1d(data, window, axis = axis, mode = 'reflect')
