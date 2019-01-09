@@ -36,7 +36,8 @@ def magnify_motions_2d(data, k = 8., width = 70):
     nlevels = 8
     tr = dtcwt.Transform2d()
     pyramids =list()
-    n = np.shape(data)[0]
+    sh = np.shape(data)
+    n = sh[0]
     print('Forward DTCWT...', end = ' ', flush = 1)
     for i in range(0,n):
         pyramids.append(tr.forward(data[i,:,:],nlevels =nlevels))
@@ -56,7 +57,7 @@ def magnify_motions_2d(data, k = 8., width = 70):
     print('DONE')
     print('Inverse DTCWT...', end = ' ', flush = 1)
     for i in range(0,n):
-        result[i,:,:] = tr.inverse(pyramids[i])
+        result[i,:,:] = (tr.inverse(pyramids[i]))[0:sh[1],0:sh[2]]
     print('DONE')
     return(result)
 
