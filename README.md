@@ -1,5 +1,7 @@
 
 # DTCWT based motion magnification
+[![DOI](https://zenodo.org/badge/56313219.svg)](https://zenodo.org/badge/latestdoi/56313219)
+
 Motion magnication acts like a microscope for low amplitude motions in image sequences, i.e. imaging data cubes or videos. It articially amplifies small displacements making them detectable by eye or some automated technique. The code provided here  is based on the two-dimensional Dual Tree Complex Wavelet Transform (DTCWT) and  allows for magnifying transverse quasi-periodic motions of contrast features in image sequences. 
 
 The algorithm is designed to work with Extreme Ultraviolet imaging observations of the Sun made with [Atmospheric Imaging Assembly](http://aia.lmsal.com) onboard [Solar Dynamics Observatory](http://sdo.gsfc.nasa.gov), but can be applied to any time sequence of images, i.e. an imaging data cube.
