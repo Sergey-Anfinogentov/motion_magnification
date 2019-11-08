@@ -1,3 +1,5 @@
+#!/usr/local/bin/python
+
 from magnify import *
 
 file_in = sys.argv[1]
