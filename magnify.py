@@ -5,6 +5,9 @@ from scipy import signal
 import numpy as np
 import sys
 
+#monkey patching of numpy.int for DTCWT compatibility with modern versions of Python
+np.int = np.int64
+
 def phase(x):
     ind = np.where(np.abs(x) > 1e-20)
     ph = np.ones_like(x)

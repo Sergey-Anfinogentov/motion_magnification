@@ -1,0 +1,4 @@
+dtcwt
+scipy
+fire
+astropy
